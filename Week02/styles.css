@@ -1,0 +1,29 @@
+/*Section Paragraf (Tugas no. 01)*/
+#Paragraf_1{
+    text-align: left;
+}
+#Paragraf_2{
+    text-align: center;
+}
+#Paragraf_3{
+    text-align: right;
+}
+#Paragraf_4{
+    text-align: justify;
+}
+/*Section List Nama Teman (Tugas no. 02)*/
+#TemanLaki{
+    color: blue;
+}
+#TemanPerempuan{
+    color: red;
+}
+/*Section List Nama Provinsi (Tugas no. 03)*/
+#ProvinsiJawa{
+    font-weight: bold;
+    color: darkgrey;
+}
+#ProvinsiNonJawa{
+    font-style: italic;
+    color: royalblue;
+}
