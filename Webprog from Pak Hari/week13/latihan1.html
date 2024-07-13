@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 13 - Latihan 1</title>
+</head>
+<body>
+	<input type="text" id="txtUrl"><br>
+	<button id="btnUrl">Change Url</button><br>
+	<a href="no-where">Click Me</a>
+
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script>
+		$("#btnUrl").click(function() {
+			var url = $("#txtUrl").val();
+			$("a").attr("href", url);
+		});
+	</script>
+</body>
+</html>

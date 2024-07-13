@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 14 - Latihan HTML</title>
+</head>
+<body>
+	<label>Photo: </label>
+	<div id="container-photo">
+		<input type="file" name="photo[]" id="photo1">
+	</div>
+	<input type="hidden" id="hid_photo_counter" value="1">
+	<input type="button" id="btn_photo" value="Add Photo">
+
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script>
+			$("#btn_photo").click(function() {
+				var counter = $("#hid_photo_counter").val();
+				counter++;
+
+				var html;
+				//html = '<input type="file" name="photo[]" id="photo1">';
+				html = '<input type="file" name="photo[]" id="photo' + counter + '">';
+
+				$("#container-photo").append(html);
+				$("#hid_photo_counter").val(counter);
+
+			});
+	</script>
+</body>
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 14 - Latihan Effects</title>
+</head>
+<body>
+	<select id="cboChoice">
+		<option value="">Pick One...</option>
+		<option value="1">Mango</option>
+		<option value="2">Apple</option>
+		<option value="3">Melon</option>
+		<option value="4">Other</option>
+	</select>
+	<input type="text" id="txtFruit" style="display: none;">
+
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script>
+		$("#cboChoice").change(function() {
+			var choice = $(this).val();
+
+			if (choice == 4) {
+				$("#txtFruit").show();
+				$("#txtFruit").focus();
+			}
+			else {
+				$("#txtFruit").hide();
+			}
+		});
+	</script>
+</body>
+</html>

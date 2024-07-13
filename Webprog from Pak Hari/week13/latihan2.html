@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 13 - Latihan 2</title>
+	<style type="text/css">
+		.red-color { background-color: red; }
+		.green-color { background-color: green; }
+		.blue-color { background-color: blue; }
+		div {
+			border: 2px solid black;
+			width: 100px;
+			height: 100px;
+		}
+	</style>
+</head>
+<body>
+	<div id="mybox"></div>
+	<button id="btnRed">Change to Red</button>
+	<button id="btnGreen">Change to Green</button>
+	<button id="btnBlue">Change to Blue</button>
+
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script>
+		$("#btnRed").click(function() {
+			$("#mybox").addClass("red-color");
+			$("#mybox").removeClass("green-color");
+			$("#mybox").removeClass("blue-color");
+		});
+		$("#btnGreen").click(function() {
+			$("#mybox").addClass("green-color");
+			$("#mybox").removeClass("red-color");
+			$("#mybox").removeClass("blue-color");
+		});
+		$("#btnBlue").click(function() {
+			$("#mybox").addClass("blue-color");
+			$("#mybox").removeClass("red-color");
+			$("#mybox").removeClass("green-color");
+		});
+	</script>
+</body>
+</html>

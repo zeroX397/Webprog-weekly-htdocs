@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title>Week 14 - Latihan Each</title>
+</head>
+<body>
+	<p>Total Kue: <b>10</b></p>
+	<p>PEMBAGIAN KUE</p>
+
+	<label>Anak 1: </label>
+	<input type="text" class="anak">
+	<label>Anak 2: </label>
+	<input type="text" class="anak">
+	<label>Anak 3: </label>
+	<input type="text" class="anak">
+
+	<button id="btnBagi" disabled>Bagi Sekarang</button>
+
+	<script src="js/jquery-3.7.1.min.js"></script>
+	<script>
+		var total_kue = $("b").html();
+
+		$(".anak").keyup(function() {
+			var jumlah = 0;
+
+			$(".anak").each(function(index) {
+ 
+				var kue = $(this).val();
+				jumlah = jumlah + (kue*1);
+				//alert(index + " : " + kue);
+
+			});
+
+			if (jumlah == total_kue) {
+				$("#btnBagi").removeAttr("disabled");
+			}
+			else {
+				$("#btnBagi").attr("disabled", true);
+			}
+			//alert(jumlah);
+
+		});
+
+		$("#btnBagi").click(function() {
+			var kue_terbanyak = 0;
+			var anak_terbanyak = 0
+
+			$(".anak").each(function(index) {
+				var kue = $(this).val();
+
+				if (kue > kue_terbanyak) {
+					kue_terbanyak = kue;
+					anak_terbanyak = (index*1)+1;
+				}
+
+			});
+
+			alert("Kue Terbanyak di Anak " + anak_terbanyak );
+
+
+
+		});
+
+
+	</script>
+</body>
+</html>
